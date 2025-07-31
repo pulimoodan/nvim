@@ -51,7 +51,6 @@ return require('packer').startup(function(use)
     use({ 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' })
 
     -- Color scheme
-    -- use { "catppuccin/nvim", as = "catppuccin" }
     use({ 'projekt0n/github-nvim-theme', as = 'github-theme' })
 
     -- Status line at the bottom
@@ -71,12 +70,8 @@ return require('packer').startup(function(use)
     -- Copilot
     use({ "github/copilot.vim" })
 
-    --- github
+    --- git actions
     use({ "lewis6991/gitsigns.nvim" })
-
-    -- file explorer
-    use { 'nvim-tree/nvim-tree.lua' }
-    use { 'nvim-tree/nvim-web-devicons' }
 
     use({ 'echasnovski/mini.nvim' })
 
