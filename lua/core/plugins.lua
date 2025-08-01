@@ -75,6 +75,9 @@ return require('packer').startup(function(use)
 
     use({ 'echasnovski/mini.nvim' })
 
+    -- For smooth cursor movement
+    use({ 'sphamba/smear-cursor.nvim' })
+
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
     if packer_bootstrap then

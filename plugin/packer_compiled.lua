@@ -84,11 +84,6 @@ _G.packer_plugins = {
     path = "/Users/akbarali/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
-  catppuccin = {
-    loaded = true,
-    path = "/Users/akbarali/.local/share/nvim/site/pack/packer/start/catppuccin",
-    url = "https://github.com/catppuccin/nvim"
-  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/Users/akbarali/.local/share/nvim/site/pack/packer/start/cmp-buffer",
@@ -124,6 +119,16 @@ _G.packer_plugins = {
     path = "/Users/akbarali/.local/share/nvim/site/pack/packer/start/friendly-snippets",
     url = "https://github.com/rafamadriz/friendly-snippets"
   },
+  ["github-theme"] = {
+    loaded = true,
+    path = "/Users/akbarali/.local/share/nvim/site/pack/packer/start/github-theme",
+    url = "https://github.com/projekt0n/github-nvim-theme"
+  },
+  ["gitsigns.nvim"] = {
+    loaded = true,
+    path = "/Users/akbarali/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
+    url = "https://github.com/lewis6991/gitsigns.nvim"
+  },
   ["lualine.nvim"] = {
     loaded = true,
     path = "/Users/akbarali/.local/share/nvim/site/pack/packer/start/lualine.nvim",
@@ -138,6 +143,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/akbarali/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
+  },
+  ["mini.nvim"] = {
+    loaded = true,
+    path = "/Users/akbarali/.local/share/nvim/site/pack/packer/start/mini.nvim",
+    url = "https://github.com/echasnovski/mini.nvim"
   },
   ["nvim-autopairs"] = {
     loaded = true,
@@ -167,12 +177,6 @@ _G.packer_plugins = {
     path = "/Users/akbarali/.local/share/nvim/site/pack/packer/opt/nvim-ts-autotag",
     url = "https://github.com/windwp/nvim-ts-autotag"
   },
-  ["nvim-web-devicons"] = {
-    loaded = false,
-    needs_bufread = false,
-    path = "/Users/akbarali/.local/share/nvim/site/pack/packer/opt/nvim-web-devicons",
-    url = "https://github.com/nvim-tree/nvim-web-devicons"
-  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/Users/akbarali/.local/share/nvim/site/pack/packer/start/packer.nvim",
@@ -182,6 +186,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/akbarali/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
+  },
+  ["prettierrc.nvim"] = {
+    loaded = true,
+    path = "/Users/akbarali/.local/share/nvim/site/pack/packer/start/prettierrc.nvim",
+    url = "https://github.com/numToStr/prettierrc.nvim"
   },
   ["telescope.nvim"] = {
     loaded = true,
