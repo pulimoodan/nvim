@@ -192,6 +192,11 @@ _G.packer_plugins = {
     path = "/Users/akbarali/.local/share/nvim/site/pack/packer/start/prettierrc.nvim",
     url = "https://github.com/numToStr/prettierrc.nvim"
   },
+  ["smear-cursor.nvim"] = {
+    loaded = true,
+    path = "/Users/akbarali/.local/share/nvim/site/pack/packer/start/smear-cursor.nvim",
+    url = "https://github.com/sphamba/smear-cursor.nvim"
+  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/Users/akbarali/.local/share/nvim/site/pack/packer/start/telescope.nvim",

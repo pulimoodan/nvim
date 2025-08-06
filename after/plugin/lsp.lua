@@ -1,12 +1,12 @@
 ---
 -- LSP configuration
 ---
-local lsp_attach = function(_, bufnr)
+local lsp_attach = function(args)
     local nmap = function(keys, func, desc)
         if desc then
             desc = "LSP: " .. desc
         end
-        vim.keymap.set("n", keys, func, { buffer = 0, desc = desc })
+        vim.keymap.set("n", keys, func, { buffer = args.buf, desc = desc })
     end
 
     -- Defintion and refernces
@@ -21,13 +21,14 @@ local lsp_attach = function(_, bufnr)
     nmap("<leader>dn", vim.diagnostic.goto_next, "[N]ext [D]iagnostic")
     nmap("<leader>dp", vim.diagnostic.goto_prev, "[P]rev [D]iagnostic")
     nmap("<leader>dl", "<cmd>Telescope diagnostics<cr>", "[L]ist [D]iagnostic")
+    nmap("<leader>ds", vim.diagnostic.open_float, "Show line diagnostics")
 
     -- Code Actions
     nmap("<leader>rn", vim.lsp.buf.rename, "[R]e[n]ame")
     nmap("<leader>ca", vim.lsp.buf.code_action, "[C]ode [A]ction")
 
     -- Create a command `:Format` local to the LSP buffer
-    vim.api.nvim_buf_create_user_command(bufnr, "Format", function(_)
+    vim.api.nvim_buf_create_user_command(args.buf, "Format", function(_)
         vim.lsp.buf.format()
     end, { desc = "Format current buffer with LSP" })
 end
@@ -37,15 +38,14 @@ require('mason').setup({})
 require('mason-lspconfig').setup({
     -- Add more languages servers here
     ensure_installed = { 'lua_ls', 'ts_ls', 'rust_analyzer' },
-    handlers = {
-        function(server_name)
-            require('lspconfig')[server_name].setup({
-                sign_text = true,
-                on_attach = lsp_attach,
-                capabilities = require('cmp_nvim_lsp').default_capabilities(),
-            })
-        end,
-    },
+})
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
+vim.lsp.config("*", {
+    capabilities = capabilities,
+    root_markers = { ".git", ".hg" },
+})
+vim.api.nvim_create_autocmd('LspAttach', {
+    callback = lsp_attach
 })
 
 
